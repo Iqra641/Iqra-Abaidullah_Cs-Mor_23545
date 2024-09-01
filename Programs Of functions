@@ -1,0 +1,445 @@
+"Program 1"
+#include<iostream>
+using namespace std;
+void show(void);
+int main()
+{
+      show();
+      return 0;
+}      
+void show()
+{
+      cout<<"Programming makes life interesting.";
+}
+
+"Program 2":
+#include<iostream>
+using namespace std;
+void max(int a,int b);
+int main()
+{
+      int x,y;
+      cout<<"Enter two numbers: ";
+      cin>>x>>y;
+      max(x,y);
+      return 0;
+}      
+void max(int a,int b)
+{
+      if(a>b)
+          cout<<"Maximum number is "<<a;
+      else    
+          cout<<"Maximum number is "<<b;
+}
+
+"Program 3"
+#include<iostream>
+using namespace std;
+void table(int n);
+int main()
+{
+      int num;
+      cout<<"Enter a numbers: ";
+      cin>>num;
+      table(num);
+      return 0;
+}      
+void table(int n)
+{
+      int c;
+      for(c=1;c<=10;c++)
+      {
+          cout<<n<<" * "<<c<" = "<<n*c<<endl;
+      }
+}
+
+"Program 4 "
+
+#include<iostream>
+using namespace std;
+void value(int);
+int main()
+{
+      int x;
+      cout<<"Enter an integer: ";
+      cin>>x;
+      value(x);
+      return 0;
+}      
+void value(int x)
+{
+      int p,n;
+      p=x-1;
+      n=x+1;
+      cout<<"The number before "<<x<<" is "<<p<<endl;
+      cout<<"The number after "<<x<<" is "<<n<<endl;
+}
+
+"Program 5"
+
+#include<iostream>
+using namespace std;
+void factorial(int n);
+int main()
+{
+      int num;
+      cout<<"Enter a number: ";
+      cin>>num;
+      factorial(num);
+      return 0;
+}      
+void factorial (int n)
+{
+      int i;
+      long fact;
+      fact=1;
+      for(i=1;i<=n;i++)
+          fact*=i;
+      cout<<"Factorial of "<<n<<" is "<<fact;
+}
+
+"Program # 6"
+
+#include<iostream>
+using namespace std;
+void chk_number(int n)
+{
+      int c=0,i;
+      for(i=2;i<=n/2;i++)
+      {
+          if(n%i==0)
+          c=1;
+      }
+      if(n%2==0&&c==0) 
+          cout<<n<<" is a prime number.";
+      else if(n%2!=0&&c==0)   
+          cout<<n<<" is a odd prime number.";
+      else if(n%2==0&&c!=0)   
+          cout<<n<<" is only an even number, not prime.";
+      else    
+          cout<<n<<" is only an odd number, not prime.";
+}     
+int main()    
+{
+      int n;
+      cout<<"\nEnter a number: ";
+      cin>>n;
+      cout<<"\nNature of number\n";
+      cout<<"\n-----------------\n";
+      chk_number(n);
+      return 0;
+}
+
+"program # 7"
+
+#include<iostream>
+using namespace std;
+void prime(int num)
+{
+      int c,p=1;
+      for(c=2;c<=n/2;c++)
+      {
+          if(num%c==0)
+          {
+              p=0;
+              break;
+          }    
+      }
+      if(p==1) 
+          cout<<num<<" is a prime number.";
+      else    
+          cout<<num<<" is a composite number.";
+}     
+int main()    
+{
+      int n;
+      cout<<"Enter an integer: ";
+      cin>>n;
+      prime(n);
+      return 0;
+}
+
+"Program # 8"
+
+#include<iostream>
+using namespace std;
+void area(float s)
+{
+      float a;
+      a=s*s;
+      cout<<"Area = "<<a<<endl;
+}
+void perimeter(float p)
+{
+      float p;
+      p=s*4;
+      cout<<"Perimeter = "<<p;
+}
+int main()
+{
+      float side;
+      cout<<"Enter the length of side: ";
+      cin>>side;
+      area(side);
+      perimeter(side);
+      return 0;
+}
+
+"Program # 9"
+
+#include<iostream>
+using namespace std;
+void cal(int a,int b,char op);
+int main
+{
+      int x,y;
+      char c;
+      cout<<"Enter first number, operator and second number: ";
+      cin>>x>>c>>y;
+      cal(x,y,c);
+      return 0;
+}    
+void cal(int a,int b,char op)
+{
+      switch(op)
+      {
+          case '+':
+             cout<<a<<"+"<<b<<"="<<a+b;
+             break;
+          case '-':
+             cout<<a<<"-"<<b<<"="<<a-b;
+             break;
+          case '*':
+             cout<<a<<"*"<<b<<"="<<a*b;
+             break;
+          case '/':
+             cout<<a<<"/"<<b<<"="<<a/b;
+             break;
+          case '%':
+             cout<<a<<"%"<<b<<"="<<a%b;
+             break;
+          default:
+             cout<<"Invalid operator";
+      }
+}
+
+"Program # 10":
+
+#include<iostream>
+using namespace std;
+void shape(int, char);
+int main()
+{
+      int num;
+      char ch;
+      cout<<"Enter a number: ";
+      cin>>num;
+      cout<<"Enter a character: ";
+      cin>>ch;
+      shape(num,ch);
+      return 0;
+}
+void shape(int n, char c)
+{
+      int i,j;
+      for(i=1;i<=n;i++)
+      {
+           cout<<endl;
+           for(j=1;j<=n;j++)
+              cout<<c;
+      }
+}
+
+"Program # 11":
+
+#include<iostream>
+using namespace std;
+void swap(int &x,int &y);
+int main()
+{
+      int a,b;
+      cout<<"Enter an integer: ";
+      cin>>a;
+      cout<<"Enter an integer: ";
+      cin>>b;
+      cout<<"Variables before swapping...\n";
+      cout<<"a = "<<a<<endl;
+      cout<<"b = "<<b<<endl;
+      swap(a,b);
+      cout<<"Variables after swapping...\n";
+      cout<<"a = "<<a<<endl;
+      cout<<"b = "<<b<<endl;
+      return 0;
+}
+void swap(int &x,int &y)
+{
+      int t;
+      t=x;
+      x=y;
+      y=t;
+}
+
+"Program # 12":
+
+#include<iostream>
+using namespace std;
+char grade(int m);
+int main()
+{
+      int marks;
+      char g;
+      cout<<" Enter marks: ";
+      cin>>marks;
+      g = grade(marks);
+      cout<<" Your grade is: "<<g;
+      return 0;
+}    
+char grade(int m);
+{
+      if(m>80)
+          return 'A';
+      else if(m>60)
+          return 'B';
+      else if(m>40)
+          return 'C';
+      else 
+          return 'F';
+}
+
+"Program # 13":
+
+#include<iostream>
+using namespace std;
+int mul(int,int);
+int main()
+{
+      int i,x,y,r;
+      for(i=1;i<=5;i++)
+      {
+           cout<<"Enter a pair of integers: ";
+           cin>>x>>y;
+           r=mul(x,y);
+           if(r==1)
+              cout<<y<<" is multiple of "<<x<<endl;
+           else    
+              cout<<y<<" is not multiple of "<<x<<endl;
+      }
+      return 0;
+}
+int mul(int a,int b)
+{
+      if(b%a==0)
+          return 1;
+      else    
+          return 0;
+}
+
+" Program # 14"
+
+bade#include<iostream>
+using namespace std;
+float area(int b,int h);
+int main()
+{
+      int base, height ;
+      float ar;
+      cout<<"Enter base: ";
+      cin>>base;
+      cout<<"Enter height: ";
+      cin>>height;
+      ar = area(base,height);
+      cout<<"Area of triangle is "<<ar;
+      return 0;
+}      
+float area(int b,int h);
+{
+      float a;
+      a = 0.5*b*h;
+      return a;
+}
+
+"Program # 15":
+
+#include<iostream>
+using namespace std;
+int sqr(int n);
+int cube (int n );
+int main()
+{
+      int base, height ;
+      float ar;
+      int a,b,r;
+      cout<<"Enter an integer: ";
+      cin>>a;
+      cout<<"Enter an integer: ";
+      cin>>b;
+      r=sqr(a)+cube(b);
+      cout<<"Result = "<<r<<endl;
+      return 0;
+}      
+int sqr(int n);
+{
+      return n*n;
+}      
+int cube (int n );
+{
+      return n*n*n;
+}
+
+"Program # 16":
+
+#include<iostream>
+using namespace std;
+float circlearea(float r)
+{
+      float a;
+      a=3.14*r*r;
+      return a;
+}      
+int main()
+{
+      float radius,area;
+      cout<<"Enter radius: ";
+      cin>>radius;
+      radius=circlearea(radius);
+      cout<<"The area of the circle = "<<radius;
+}
+
+"Program # 17":
+
+#include<iostream>
+using namespace std;
+int g;
+void fun();
+int main()
+{
+      cout<<"Enter a number: ";
+      cin>>g;
+      cout<<"Value of g before function call: "<<g<<endl;
+      fun();
+      cout<<"Value of g after function call: "<<g<<endl;
+      return 0;
+}      
+void fun()
+{
+      g=g*2;
+}
+
+"Program # 18":
+
+#include<iostream>
+using namespace std;
+void fun();
+int main()
+{
+      int i;
+      for(i=1;i<=5;i++)
+           fun();
+      return 0;
+}      
+void fun()
+{
+      static int n=0;
+      n++;
+      cout<<"Value of n = "<<n<<endl;
+}
